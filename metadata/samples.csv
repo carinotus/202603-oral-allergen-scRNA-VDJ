@@ -1,0 +1,5 @@
+sample_id,age_week,antigen,replicate,batch,mrna_type,mrna_path,vdj_path,notes
+3w_HDM_rep1,3,HDM,1,batch1,filtered_h5,,,
+3w_OVA_rep1,3,OVA,1,batch1,filtered_h5,,,
+5w_HDM_rep1,5,HDM,1,batch2,filtered_h5,,待释放
+5w_OVA_rep1,5,OVA,1,batch2,filtered_h5,,待释放
