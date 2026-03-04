@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # 202603 围断奶期口服过敏原免疫细胞图谱（10x mRNA + VDJ）
 
 ## 项目目标
@@ -8,8 +7,7 @@ cat > README.md <<'EOF'
 ## 数据批次
 - 3w HDM（mRNA + VDJ）
 - 3w OVA（mRNA + VDJ）
-- 5w HDM（mRNA + VDJ）
-- 5w OVA (mRNA + VDJ)
+- 5w HDM + OVA（mRNA + VDJ）
 
 ## 目录约定
 - data/raw/：原始数据（只读，尽量软链接/不改动）
@@ -21,7 +19,7 @@ cat > README.md <<'EOF'
 - results/tables/：最终表格输出（可选择入 git）
 - results/logs/：每次运行日志（不入 git）
 
-## 分析流程（最小模块）
+## 分析流程
 01_import_qc.R
 - 输入：10x mRNA 矩阵（h5 或 filtered_feature_bc_matrix）
 - 输出：每样本 QC 图（nCount/nFeature/percent.mt 等）、过滤后的 Seurat 对象（里程碑1）
