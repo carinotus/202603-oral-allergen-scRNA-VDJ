@@ -1,0 +1,15 @@
+data/raw/
+data/processed/
+data/external/
+results/figures/
+results/logs/
+*.rds
+*.qs
+*.h5
+*.h5seurat
+*.RData
+*.tar.gz
+*.fastq.gz
+.Rhistory
+.Rproj.user/
+.DS_Store
