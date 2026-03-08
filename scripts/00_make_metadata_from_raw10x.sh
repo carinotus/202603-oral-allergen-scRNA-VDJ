@@ -67,4 +67,4 @@ for d in "$BASE"/*; do
   echo "$sid,$batch,$age,$antigen,$sex,$rep,$mrna_type,$mrna,$tcr,$bcr,$loom,$notes" >> "$OUT"
 done
 
-echo "[build_metadata] wrote: $OUT"
+echo "[make_metadata] wrote: $OUT"

@@ -26,10 +26,10 @@ mkdir -p results/figures results/tables results/logs
 mkdir -p metadata
 
 echo "[STEP] 1) OVA/5W (LC-like) 解压 + 软链接"
-bash scripts/00_bash_commands_lc_like.sh
+bash scripts/00_bash_commands_lc_like.sh # 解压联川格式的测序数据并软链接到 data/raw/10x/<sample_id>/{mrna,tcr,bcr}
 
 echo "[STEP] 2) 3W_HDM (split) 校验 + 解压 + 软链接"
-bash scripts/00_bash_commands_hdm_split.sh
+bash scripts/00_bash_commands_hdm_split.sh # 校验3W_PBS_HDM样格式的的Summary.tar.gz，解压到 unpacked/，再软链接到 data/raw/10x/<sample_id>/{mrna,tcr,bcr,loom}
 
 echo "[STEP] 3) 验收统一入口 data/raw/10x"
 # tree 用于直观看目录层级（若服务器没装 tree，可 sudo apt-get install tree）
@@ -42,6 +42,7 @@ fi
 
 echo "[STEP] 4) 生成 metadata/samples_auto.csv（用于R批量读取）"
 # 你已有这个脚本就直接调用
-bash scripts/00_make_samples_auto.sh
+bash scripts/00_make_samples_auto.sh # 生成 metadata/samples_auto.csv
+bash scripts/00_make_metadata_from_raw10x.sh # 生成 metadata/samples.csv（包含更多手动补充的字段）
 
 echo "[DONE] All steps finished."
